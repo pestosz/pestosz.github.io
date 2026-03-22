@@ -1,3 +1,138 @@
 body {
-  background-color: #dfecff;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(180deg, #ffffff 0%, #e68bbe 100%);
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 10px 10px 20px rgba(92,55,76,0.5);
+  border-bottom: 3px solid #fde4f2;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 900;
+  font-style: normal;
+  margin: 0;
+  color: #e68bbe;
+  font-size: 2.5rem;
+}
+
+article {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 100px;
+  box-shadow: 10px 10px 20px rgba(92,55,76,0.5);
+}
+
+h2 {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 900;
+  font-style: normal;
+  color: #e68bbe;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #e68bbe;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px rgba(92,55,76,0.5);
+}
+
+img:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+ul {
+  background-color: #fde4f2;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  border-left: 5px solid #e68bbe;
+  border-radius: 6px;
+  list-style-type: square;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f4b8da;
+  color: #ffffff;
+  margin-top: 4rem;
+}
+
+h5 {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  main {
+    padding: 0 0.5rem;
+  }
+  article {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50px;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  ul {
+    padding: 0.8rem 0.8rem 0.8rem 1.5rem;
+  }
+  footer {
+    padding: 1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
 }

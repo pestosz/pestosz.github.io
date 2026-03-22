@@ -1,3 +1,135 @@
+* { box-sizing: border-box; }
+
 body {
-  background-color: #ecfbe6;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("assets/kot5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  line-height: 1.8;
+}
+
+header {
+  background: #000;
+  padding: 100px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 90% 80%, 80% 100%, 70% 80%, 60% 80%, 50% 100%, 40% 80%, 30% 80%, 20% 100%, 10% 80%, 0% 80%);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: #b3cde0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+article {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin-bottom: 60px;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  height: 600px;
+  overflow-y: auto;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  color: #b3cde0;
+  margin-bottom: 30px;
+  text-underline-offset: 10px;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #b3cde0;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  border: 2px solid #333;
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+h5{
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  max-width: 800px;
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+ul {
+  list-style: none;
+  padding: 40px;
+  background: #000;
+  border: 2px solid #b3cde0;
+  max-width: 600px;
+}
+
+li {
+  padding: 10px 0;
+  color: #fff;
+  border-bottom: 1px solid #222;
+}
+
+footer {
+  padding: 60px;
+  background: #000;
+  color: #666;
+  text-align: center;
+  font-size: 0.8rem;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: 40px 20px;
+    border-left-width: 5px;
+  }
+
+  h2 { font-size: 1.8rem; }
+
+  header { padding: 50px 20px; }
+
+  main {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  footer{
+    font-size: 0.7rem;
+  }
 }
