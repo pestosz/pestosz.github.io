@@ -1,3 +1,64 @@
 body {
-  background-color: #f3fff3;
+  background-image: url('assets/bg.png');
+}
+
+#appBody {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#search {
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: black;
+}
+
+.entry {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.entry .name, .entry .date {
+  font-size: 16px;
+}
+
+#add {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 25%;
+}
+
+header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #886559;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 10px;
+  background-color: #886559;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
