@@ -1,3 +1,119 @@
-body {
+body, button {
   background-color: #e6f1fc;
+  font-family: "Comic Sans MS", cursive, sans-serif; /*piękna czcionka*/
+  font-weight: bold;
+  color: #000149FF;
+}
+
+.section {
+  display: grid;
+  place-items: center;
+}
+
+#playmat, #storage {
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(0, 1, 73);
+  margin: 0;
+}
+
+button {
+  width: 200px;
+  height: 25px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(0, 1, 73);
+  transition: transform 0.15s ease;
+}
+
+#playfield {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.canvasBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canvasLabel {
+  font-size: 1.0em;
+}
+
+.separator {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: rgba(218, 118, 112, 0.3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(0, 1, 73);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(0, 1, 73);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#rasterMap {
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgb(0, 1, 73);
+  margin: 0;
+  background-color: #e6f1fc;
+}
+
+header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  background-color: rgba(218, 118, 112, 0.3);
+  margin-bottom: 20px;
+  border: 2px solid rgb(0, 1, 73);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 10px;
+  background-color: rgba(218, 118, 112, 0.3);
+  margin-top: 20px;
+  border: 2px solid rgb(0, 1, 73);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+#playmat, #storage {
+  cursor: grab;
+  background-color: #e6f1fc;
+}
+
+#getLocation:hover {
+  transform: rotate(3deg);
+}
+
+#saveButton:hover {
+  transform: rotate(-3deg);
+}
+
+#startGame:hover {
+  transform: rotate(3deg);
+}
+
+#manual {
+  border: 2px solid rgb(0, 1, 73);
+  border-radius: 8px;
 }

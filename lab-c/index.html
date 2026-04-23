@@ -4,11 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bartosz Pestka (57885) - PTW LAB C</title>
-
+    <link rel="stylesheet" href="leaflet-1.9.4/leaflet.css">
     <link rel="stylesheet" href="styles.css" type="text/css">
     <script src="scripts.js" defer></script>
+    <script src="leaflet-1.9.4/leaflet-src.js"></script>
+    <script src="leaflet-1.9.4/leaflet-providers.js"></script>
+    <script src="leaflet-1.9.4/leaflet-image.js"></script>
 </head>
 <body>
-
+<header>Puzzle</header>
+<main>
+    <div class="separator">Wybór mapy</div>
+    <div class="section">
+        <div id="positionInfo">
+            <strong>Szerokość:</strong> <span id="latitude">53.430127 (domyślna)</span><br>
+            <strong>Długość:</strong> <span id="longitude">14.564802 (domyślna)</span><br>
+        </div>
+        <div id="map"></div>
+        <button id="getLocation">Moja lokalizacja</button>
+        <button id="saveButton">Pobierz mapę</button>
+        <button id="startGame">Stwórz puzzle</button>
+    </div>
+    <div class="separator">Pole rozgrywki</div>
+    <br>
+    <div class="section">
+        <div id="playfield">
+            <div class="canvasBox">
+                <div class="label">Pobrana mapa</div>
+                <canvas id="rasterMap" width="300" height="300"></canvas>
+            </div>
+            <div class="canvasBox">
+                <div class="label">Plansza do układania</div>
+                <canvas id="playmat" width="300" height="300"></canvas>
+            </div>
+            <div class="canvasBox">
+                <div class="label">Schowek</div>
+                <canvas id="storage" width="300" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="separator">Instrukcja</div>
+    <div class="section" id="manual">
+        <ul>
+            <li>Instrukcja obsługi:<ol>
+                <li>Wybierz miejsce na mapie lub kliknij przycisk "Moja lokalizacja".</li>
+                <li>Wyraź zgodę na użycie lokalizacji.</li>
+                <li>Kliknij przycisk "Pobierz mapę".</li>
+                <li>Kliknij przycisk "Stwórz puzzle".</li>
+                <li>Wyraź zgodę na wysyłanie powiadomień.</li>
+                <li>Puzzle pojawiły się w schowku, przeciągaj je na planszę aby odwzorować oryginalny obrazek.</li>
+                <li>Po ułożeniu całej układanki pojawi się powiadomienie o wygranej.</li>
+            </ol></li>
+            <li>Opis sekcji pola rozgrywki:<ol>
+                <li>Pobrana mapa - to tutaj wyświetla się widok mapy pobranej z sekcji "Wybierz mapę".</li>
+                <li>Plansza do układania - to w tym oknie należy układać puzzle, tak aby powstał obrazek jak w polu "Pobrana mapa".</li>
+                <li>Schowek - to w nim pojawiają się rozrzucone elementy układanki po kliknięciu "Stwórz puzzle". Przeciągaj je do pola "Plansza do układania".</li>
+            </ol></li>
+        </ul>
+    </div>
+</main>
+<footer>Bartosz Pestka 57885</footer>
 </body>
 </html>
