@@ -72,7 +72,10 @@ function checkDone() { //sprawdza czy wszystkie puzzle są na swoich miejscach, 
     const done = pieces.every((piece) => piece.zone === "playmat" && piece.placed); //sprawdza warunek wygranej, czyli czy każdy puzzel jest na swoim miejscu na canvasie playmat
     if (done) {
         solved = true;
+        console.log("puzzle są ułożone");
         const notification = new Notification("Gratulacje!", { body: "Udało Ci się ułozyć puzzle."});
+    } else {
+        console.log("puzzle jeszcze nie są ułożone");
     }
 }
 document.getElementById("startGame").addEventListener("click", () => {
