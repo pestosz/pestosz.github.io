@@ -8,13 +8,47 @@
 </head>
 <body>
 <header><h1>Wybierz laboratorium:</h1></header>
-<ul>
+<label for="przycisk">Gdzie otworzyć?</label><br>
+<select id="przycisk" style="text-align-last: center;">
+    <option value="0">Ta karta</option>
+    <option value="1">Nowa karta</option>
+    <option value="2">iframe</option>
+</select>
+<ul style="padding: 0; list-style-type: none;">
     <li><a href="https://pestosz.github.io/lab-a/index.html">Lab A</a></li>
     <li><a href="https://pestosz.github.io/lab-b/index.html">Lab B</a></li>
     <li><a href="https://pestosz.github.io/lab-c/index.html">Lab C</a></li>
     <li><a href="https://pestosz.github.io/lab-d/index.html">Lab D</a></li>
     <li><a href="https://pestosz.github.io/lab-e/index.html">Lab E</a></li>
 </ul>
+<iframe id="content" name="frame" style="display: none; width: 100%; height: 50rem; border: none;"></iframe>
 <footer><h5>Copyright &copy; 2026 Bartosz Pestka</h5></footer>
+<script>
+    const selectElement = document.getElementById('przycisk');
+    const links = document.querySelectorAll('ul a');
+    const frame = document.getElementById('content');
+    function updateTarget() {
+        const selectVal = selectElement.value;
+        links.forEach(link => {
+            if (selectVal === '0') {
+                link.target = '_self';
+                link.onclick = null;
+            } else if (selectVal === '1') {
+                link.target = '_blank';
+                link.onclick = null;
+            } else if (selectVal === '2') {
+                link.target = 'frame';
+                link.onclick = () => {
+                    frame.style.display = 'block';
+                };
+            }
+        });
+        if (selectVal !== '2') {
+            frame.style.display = 'none';
+        }
+    }
+    selectElement.addEventListener('change', updateTarget);
+    updateTarget();
+</script>
 </body>
 </html>
