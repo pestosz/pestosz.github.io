@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="lab-d/styles.css" type="text/css">
 </head>
 <body>
-<header><h1>Wybierz laboratorium:</h1></header>
+<header><h1>Wybierz laboratorium:</h1><hr style="border: none;height: 1px;background-color: #000"></header>
 <label for="przycisk">Gdzie otworzyć?</label><br>
 <select id="przycisk" style="text-align-last: center;">
     <option value="0">Ta karta</option>
@@ -19,10 +19,15 @@
     <li><a href="https://pestosz.github.io/lab-b/index.html">Lab B</a></li>
     <li><a href="https://pestosz.github.io/lab-c/index.html">Lab C</a></li>
     <li><a href="https://pestosz.github.io/lab-d/index.html">Lab D</a></li>
-    <li><a href="https://pestosz.github.io/lab-e/index.html">Lab E (TS się nie załaduje)</a></li>
+    <li><a href="https://pestosz.github.io/lab-e/index.html">Lab E</a></li>
+    <li><a href="https://pestosz.github.io/lab-f/index.php">Lab F (WIP)</a></li>
+</ul>
 </ul>
 <iframe id="content" name="frame" style="display: none; width: 100%; height: 50rem; border: none;"></iframe>
-<footer><h5>Copyright &copy; 2026 Bartosz Pestka</h5></footer>
+<footer><hr style="border: none;height: 1px;background-color: #000">
+    <p style="font-size: 0.3em">Niektóre strony mogą nie wyświetlać się poprawnie, np. ze względu na brak kompilacji kodu (np. w przypadku TS).</p><hr style="border: none;height: 1px;background-color: #000">
+    <h5>Copyright &copy; 2026 Bartosz Pestka</h5>
+</footer>
 <script>
     const selectElement = document.getElementById('przycisk');
     const links = document.querySelectorAll('ul a');
