@@ -19,13 +19,13 @@
     <li><a href="https://pestosz.github.io/lab-b/index.html">Lab B</a></li>
     <li><a href="https://pestosz.github.io/lab-c/index.html">Lab C</a></li>
     <li><a href="https://pestosz.github.io/lab-d/index.html">Lab D</a></li>
-    <li><a href="https://pestosz.github.io/lab-e/index.html">Lab E</a></li>
-    <li><a href="https://pestosz.github.io/lab-f/index.php">Lab F (WIP)</a></li>
+    <li><a href="https://github.com/pestosz/pestosz.github.io/tree/main/lab-e" class="non">Lab E<sup>*</sup></a></li>
+    <li><a href="https://github.com/pestosz/pestosz.github.io/tree/main/lab-f" class="non">Lab F<sup>*</sup></a></li>
 </ul>
 </ul>
 <iframe id="content" name="frame" style="display: none; width: 100%; height: 50rem; border: none;"></iframe>
 <footer><hr style="border: none;height: 1px;background-color: #000">
-    <p style="font-size: 0.3em">Niektóre strony mogą nie wyświetlać się poprawnie, np. ze względu na brak kompilacji kodu (np. w przypadku TS).</p><hr style="border: none;height: 1px;background-color: #000">
+    <p style="font-size: 0.3em"><sup>*</sup> Linki oznaczone gwiazdką odsyłają do repozytorium zamiast na Github Pages. Nie zadziała też na nich otwieranie w iframe. Są to laboratoria wykorzystujące języki kompilowane.</p><hr style="border: none;height: 1px;background-color: #000">
     <h5>Copyright &copy; 2026 Bartosz Pestka</h5>
 </footer>
 <script>
@@ -42,10 +42,15 @@
                 link.target = '_blank';
                 link.onclick = null;
             } else if (selectVal === '2') {
-                link.target = 'frame';
-                link.onclick = () => {
-                    frame.style.display = 'block';
-                };
+                if (link.classList.contains('non')) {
+                    link.target = '_blank';
+                    link.onclick = null;
+                } else {
+                    link.target = 'frame';
+                    link.onclick = () => {
+                        frame.style.display = 'block';
+                    };
+                }
             }
         });
         if (selectVal !== '2') {
