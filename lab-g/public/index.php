@@ -39,10 +39,12 @@ switch ($action) {
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
     case 'book-index':
+        /** @var \App\Controller\BookController $controller */
         $controller = new \App\Controller\BookController();
         $view = $controller->indexAction($templating, $router);
         break;
     case 'book-create':
+        /** @var \App\Controller\BookController $controller */
         $controller = new \App\Controller\BookController();
         $view = $controller->createAction($_REQUEST['book'] ?? null, $templating, $router);
         break;
@@ -50,6 +52,7 @@ switch ($action) {
         if (! $_REQUEST['id']) {
             break;
         }
+        /** @var \App\Controller\BookController $controller */
         $controller = new \App\Controller\BookController();
         $view = $controller->editAction($_REQUEST['id'], $_REQUEST['book'] ?? null, $templating, $router);
         break;
@@ -57,6 +60,7 @@ switch ($action) {
         if (! $_REQUEST['id']) {
             break;
         }
+        /** @var \App\Controller\BookController $controller */
         $controller = new \App\Controller\BookController();
         $view = $controller->showAction($_REQUEST['id'], $templating, $router);
         break;
@@ -64,6 +68,7 @@ switch ($action) {
         if (! $_REQUEST['id']) {
             break;
         }
+        /** @var \App\Controller\BookController $controller */
         $controller = new \App\Controller\BookController();
         $view = $controller->deleteAction($_REQUEST['id'], $router);
         break;
