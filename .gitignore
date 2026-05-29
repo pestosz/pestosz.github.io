@@ -5,6 +5,9 @@ __MACOSX/
 .AppleDouble
 .LSOverride
 Icon[]
+.env
+.env.dev
+.env.test
 
 # Resource forks
 ._*
