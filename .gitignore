@@ -8,6 +8,8 @@ Icon[]
 .env
 .env.dev
 .env.test
+.idea
+node_modules
 
 # Resource forks
 ._*
