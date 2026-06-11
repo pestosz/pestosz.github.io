@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+{% block body_class %}index{% endblock %}
+
+{% block content %}
+    <h1>Books List</h1>
+
+    <a href="{{ url_for('book_create') }}">Create new</a>
+
+    <ul class="index-list">
+        {% for book in books %}
+            <li>
+                <h3>{{ book['title'] }}</h3>
+                <ul class="action-list">
+                    <li><a href="{{ url_for('book_show', book_id=book['id']) }}">Details</a></li>
+                    <li><a href="{{ url_for('book_edit', book_id=book['id']) }}">Edit</a></li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

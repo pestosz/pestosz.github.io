@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book['title'] }} ({{ book['id'] }}){% endblock %}
+{% block body_class %}show{% endblock %}
+
+{% block content %}
+    <h1>{{ book['title'] }}</h1>
+    <h2>{{ book['author'] }}</h2>
+    <article>
+        {{ book['description'] }}
+    </article>
+
+    <ul class="action-list">
+        <li><a href="{{ url_for('book_index') }}">Back to list</a></li>
+        <li><a href="{{ url_for('book_edit', book_id=book['id']) }}">Edit</a></li>
+    </ul>
+{% endblock %}

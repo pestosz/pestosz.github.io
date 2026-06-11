@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Custom Framework (Flask){% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.min.css">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('book_index') }}">Books</a></li>
+    </ul>
+</nav>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer>&copy; 2026 Custom Framework (Flask)</footer>
+</body>
+</html>
