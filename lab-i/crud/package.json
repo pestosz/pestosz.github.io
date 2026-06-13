@@ -2,10 +2,12 @@
   "name": "crud",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "better-sqlite3": "^12.10.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",

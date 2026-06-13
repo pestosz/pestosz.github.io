@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h1><%= title %></h1>
+<form action="/books/<%= book.id %>/edit" method="post" class="edit-form">
+    <%- include('_form') %>
+</form>
+
+<ul class="action-list">
+    <li>
+        <a href="/books">Back to list</a></li>
+    <li>
+        <form action="/books/<%= book.id %>/delete" method="post">
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure?')">
+        </form>
+    </li>
+</ul>
+
+<%- include('../partials/footer') %>

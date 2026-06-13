@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h1>Books List</h1>
+
+<a href="/books/create">Create new</a>
+
+<ul class="index-list">
+    <% books.forEach(function(book) { %>
+        <li><h3><%= book.title %></h3>
+            <ul class="action-list">
+                <li><a href="/books/<%= book.id %>">Details</a></li>
+                <li><a href="/books/<%= book.id %>/edit">Edit</a></li>
+            </ul>
+        </li>
+    <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

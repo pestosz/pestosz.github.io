@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h1><%= book.title %></h1>
+<h2><%= book.author %></h2>
+<article>
+    <%= book.description %>
+</article>
+
+<ul class="action-list">
+    <li> <a href="/books">Back to list</a></li>
+    <li><a href="/books/<%= book.id %>/edit">Edit</a></li>
+</ul>
+
+<%- include('../partials/footer') %>
